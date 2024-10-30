@@ -16,9 +16,11 @@ for i in range(len(s1)):
         tup['left'] = n*-1
         lst.append(n*-1)
         lst_l.append(n*-1)
-for i in range(len(lst)):
-    if lst[i] == max(set(lst)):
-        lst[i] = 33-lst[i]
+
+while len(set(lst)) > 2:
+    for i in range(len(lst)):
+        if lst[i] == max(set(lst)):
+            lst[i] = 33-lst[i]
 
 for i in lst:
     if i in lst_r:
